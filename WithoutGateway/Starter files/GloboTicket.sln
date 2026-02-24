@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.30128.74
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36915.13 d17.14
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GloboTicket.Web", "GloboTicket.Client\GloboTicket.Web.csproj", "{0848F9B8-B1CC-412F-9A8C-A09058575A1E}"
 EndProject
@@ -22,6 +22,8 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GloboTicket.Integration.MessagingBus", "GloboTicket.Integration.MessagingBus\GloboTicket.Integration.MessagingBus.csproj", "{532539E3-8124-49E1-BDAE-8931A42BF7D6}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GloboTicket.Integration.Messages", "GloboTicket.Integration.Messages\GloboTicket.Integration.Messages.csproj", "{A6997021-8A1B-4727-9E5C-3EC1DB783BFC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GloboTicket.Services.Identity", "GloboTicket.Services.Identity\GloboTicket.Services.Identity.csproj", "{B7219CD9-66D4-CC9C-136D-3D83AC4884B4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -57,6 +59,10 @@ Global
 		{A6997021-8A1B-4727-9E5C-3EC1DB783BFC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A6997021-8A1B-4727-9E5C-3EC1DB783BFC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A6997021-8A1B-4727-9E5C-3EC1DB783BFC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B7219CD9-66D4-CC9C-136D-3D83AC4884B4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B7219CD9-66D4-CC9C-136D-3D83AC4884B4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B7219CD9-66D4-CC9C-136D-3D83AC4884B4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B7219CD9-66D4-CC9C-136D-3D83AC4884B4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
