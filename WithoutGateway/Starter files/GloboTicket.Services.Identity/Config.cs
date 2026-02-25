@@ -58,7 +58,7 @@ namespace GloboTicket.Services.Identity
                     ClientSecrets = { new Secret("eac7008f-1b35-4325-ac8d-4a71932e6088".Sha256())},
                     AllowedGrantTypes = GrantTypes.ClientCredentials,
                     AllowedScopes = {"globoticket.fullaccess"}
-                }
+                },
                 //new Client
                 //{
                 //    ClientName = "GloboTicket Machine 2 Machine Client",
@@ -67,16 +67,16 @@ namespace GloboTicket.Services.Identity
                 //    AllowedGrantTypes = GrantTypes.ClientCredentials,
                 //    AllowedScopes = { "eventcatalog.fullaccess" }
                 //},
-                //new Client
-                //{
-                //    ClientName = "GloboTicket Interactive Client",
-                //    ClientId = "globoticketinteractive",
-                //    ClientSecrets = { new Secret("ce766e16-df99-411d-8d31-0f5bbc6b8eba".Sha256()) },
-                //    AllowedGrantTypes = GrantTypes.Code,
-                //    RedirectUris = { "https://localhost:5000/signin-oidc" },
-                //    PostLogoutRedirectUris = { "https://localhost:5000/signout-callback-oidc" },
-                //    AllowedScopes = { "openid", "profile", "shoppingbasket.fullaccess" }
-                //},
+                new Client
+                {
+                    ClientName = "GloboTicket Interactive Client",
+                    ClientId = "globoticketinteractive",
+                    ClientSecrets = { new Secret("ce766e16-df99-411d-8d31-0f5bbc6b8eba".Sha256()) },
+                    AllowedGrantTypes = GrantTypes.Code,
+                    RedirectUris = { "https://localhost:5000/signin-oidc" },
+                    PostLogoutRedirectUris = { "https://localhost:5000/signout-callback-oidc" },
+                    AllowedScopes = { "openid", "profile" } //, "shoppingbasket.fullaccess" }
+                },
                 //new Client
                 //{
                 //    ClientName = "GloboTicket Client",
