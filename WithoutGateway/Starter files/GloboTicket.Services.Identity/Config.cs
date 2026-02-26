@@ -75,7 +75,7 @@ namespace GloboTicket.Services.Identity
                     AllowedGrantTypes = GrantTypes.Code,
                     RedirectUris = { "https://localhost:5000/signin-oidc" },
                     PostLogoutRedirectUris = { "https://localhost:5000/signout-callback-oidc" },
-                    AllowedScopes = { "openid", "profile" } //, "shoppingbasket.fullaccess" }
+                    AllowedScopes = { "openid", "profile", "globoticket.fullaccess" } //, "shoppingbasket.fullaccess" }
                 },
                 //new Client
                 //{

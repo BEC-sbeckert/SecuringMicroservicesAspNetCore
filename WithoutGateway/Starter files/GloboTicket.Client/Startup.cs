@@ -63,6 +63,7 @@ namespace GloboTicket.Web
                 options.SaveTokens = true;
                 options.ClientSecret = "ce766e16-df99-411d-8d31-0f5bbc6b8eba";
                 options.GetClaimsFromUserInfoEndpoint = true;
+                options.Scope.Add("globoticket.fullaccess");
             }
 
             );
