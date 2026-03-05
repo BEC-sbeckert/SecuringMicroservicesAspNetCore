@@ -55,7 +55,7 @@ namespace GloboTicket.Services.EventCatalog
                 .AddJwtBearer(options => 
                 { 
                     options.Authority = "https://localhost:5010";
-                    options.Audience = "globoticket";
+                    options.Audience = "eventcatalog";
                 });
         }
 

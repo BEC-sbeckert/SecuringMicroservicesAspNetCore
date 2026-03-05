@@ -58,12 +58,13 @@ namespace GloboTicket.Web
             {
                 options.SignInScheme = CookieAuthenticationDefaults.AuthenticationScheme;
                 options.Authority = "https://localhost:5010/";
-                options.ClientId = "globoticketinteractive";
+                options.ClientId = "globoticket";
+                //options.ClientId = "globoticketinteractive";
                 options.ResponseType = "code";
                 options.SaveTokens = true;
                 options.ClientSecret = "ce766e16-df99-411d-8d31-0f5bbc6b8eba";
                 options.GetClaimsFromUserInfoEndpoint = true;
-                options.Scope.Add("globoticket.fullaccess");
+                options.Scope.Add("shoppingbasket.fullaccess");
             }
 
             );
