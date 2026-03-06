@@ -23,14 +23,14 @@ namespace GloboTicket.Services.Identity
                 {
                     Scopes = { "eventcatalog.read", "eventcatalog.write" }
                 },
-               new ApiResource("shoppingbasket", "Shopping basket API")
+              new ApiResource("shoppingbasket", "Shopping basket API")
                 {
                     Scopes = { "shoppingbasket.fullaccess" }
                 },
-              //   new ApiResource("discount", "Discount API")
-              //  {
-              //      Scopes = { "discount.fullaccess" }
-              //  }
+              new ApiResource("discount", "Discount API")
+                {
+                    Scopes = { "discount.fullaccess" }
+                }
           };
 
         public static IEnumerable<ApiScope> ApiScopes =>
@@ -40,7 +40,7 @@ namespace GloboTicket.Services.Identity
                 new ApiScope("shoppingbasket.fullaccess"),
                 new ApiScope("eventcatalog.read"),
                 new ApiScope("eventcatalog.write"),
-                //new ApiScope("discount.fullaccess")
+                new ApiScope("discount.fullaccess")
             };
 
         public static IEnumerable<Client> Clients =>
@@ -75,15 +75,15 @@ namespace GloboTicket.Services.Identity
                     AllowedScopes = { "openid", "profile", "shoppingbasket.fullaccess",
                     "eventcatalog.read", "eventcatalog.write" }
                 },
-                //new Client
-                //{
-                //    ClientId = "shoppingbaskettodownstreamtokenexchangeclient",
-                //    ClientName = "Shopping Basket Token Exchange Client",
-                //    AllowedGrantTypes = new[] { "urn:ietf:params:oauth:grant-type:token-exchange" },
-                //    ClientSecrets = { new Secret("0cdea0bc-779e-4368-b46b-09956f70712c".Sha256()) },
-                //    AllowedScopes = {
-                //         "openid", "profile", "discount.fullaccess" }
-                //},
+                new Client
+                {
+                    ClientId = "shoppingbaskettodownstreamtokenexchangeclient",
+                    ClientName = "Shopping Basket Token Exchange Client",
+                    AllowedGrantTypes = new[] { "urn:ietf:params:oauth:grant-type:token-exchange" },
+                    ClientSecrets = { new Secret("0cdea0bc-779e-4368-b46b-09956f70712c".Sha256()) },
+                    AllowedScopes = {
+                         "openid", "profile", "discount.fullaccess" }
+                },
 
             };
     }
