@@ -19,19 +19,10 @@ namespace GloboTicket.Services.Identity
         public static IEnumerable<ApiResource> ApiResources =>
           new ApiResource[]
           {
-              //new ApiResource("globoticket","GloboTicket APIs")
-              //{
-              //    Scopes = {"globoticket.fullaccess"}
-              //}
-
               new ApiResource("eventcatalog", "Event catalog API")
                 {
-                    Scopes = { "eventcatalog.fullaccess" }
+                    Scopes = { "eventcatalog.read", "eventcatalog.write" }
                 },
-              //new ApiResource("eventcatalog", "Event catalog API")
-              //  {
-              //      Scopes = { "eventcatalog.read", "eventcatalog.write" }
-              //  },
                new ApiResource("shoppingbasket", "Shopping basket API")
                 {
                     Scopes = { "shoppingbasket.fullaccess" }
@@ -45,25 +36,16 @@ namespace GloboTicket.Services.Identity
         public static IEnumerable<ApiScope> ApiScopes =>
             new ApiScope[]
             {
-                //new ApiScope("globoticket.fullaccess")
                 new ApiScope("eventcatalog.fullaccess"),
                 new ApiScope("shoppingbasket.fullaccess"),
-                //new ApiScope("eventcatalog.read"),
-                //new ApiScope("eventcatalog.write"),
+                new ApiScope("eventcatalog.read"),
+                new ApiScope("eventcatalog.write"),
                 //new ApiScope("discount.fullaccess")
             };
 
         public static IEnumerable<Client> Clients =>
             new Client[]
             {    
-                //new Client
-                //{
-                //    ClientName = "GloboTicket Machine 2 Machine Client",
-                //    ClientId = "globoticketm2m",
-                //    ClientSecrets = { new Secret("eac7008f-1b35-4325-ac8d-4a71932e6088".Sha256())},
-                //    AllowedGrantTypes = GrantTypes.ClientCredentials,
-                //    AllowedScopes = {"globoticket.fullaccess"}
-                //},
                 new Client
                 {
                     ClientName = "GloboTicket Machine 2 Machine Client",
@@ -81,7 +63,6 @@ namespace GloboTicket.Services.Identity
                     RedirectUris = { "https://localhost:5000/signin-oidc" },
                     PostLogoutRedirectUris = { "https://localhost:5000/signout-callback-oidc" },
                     AllowedScopes = { "openid", "profile", "shoppingbasket.fullaccess" }
-                    //AllowedScopes = { "openid", "profile", "globoticket.fullaccess" }
                 },
                 new Client
                 {
@@ -92,8 +73,7 @@ namespace GloboTicket.Services.Identity
                     RedirectUris = { "https://localhost:5000/signin-oidc" },
                     PostLogoutRedirectUris = { "https://localhost:5000/signout-callback-oidc" },
                     AllowedScopes = { "openid", "profile", "shoppingbasket.fullaccess",
-                        "eventcatalog.fullaccess" }
-                    //"eventcatalog.read", "eventcatalog.write" }
+                    "eventcatalog.read", "eventcatalog.write" }
                 },
                 //new Client
                 //{
